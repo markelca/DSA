@@ -1,4 +1,5 @@
 # Definition for singly-linked list.
+# url: https://leetcode.com/problems/merge-two-sorted-lists/
 class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
@@ -62,7 +63,6 @@ class LinkedList:
             cur.next = new
         elif cur == self.tail:
             self.insertTail(val)
-
 
 
     def merge(self,ll):
