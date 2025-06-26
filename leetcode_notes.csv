@@ -1,0 +1,2 @@
+problem,note
+225. Implement Stack using Queues,Popleft meanwhile you append for pop function. It'll leave the queue to the same state

@@ -19,24 +19,15 @@ class MyStack(object):
         """
         :rtype: int
         """
-        res = None
-
-        i = 0
-        while self.q1:
-            res = self.q1.popleft()
-            if i < len(self.q1):
-                self.q1.append(res)
-            else:
-                break
-            i += 1
-
-        return res
+        for _ in range(len(self.q1) - 1):
+            self.q1.append(self.q1.popleft())
+        return self.q1.popleft()
 
     def top(self):
         """
         :rtype: int
         """
-        return self.q1[len(self.q1)-1]
+        return self.q1[-1]
 
 
     def empty(self):
